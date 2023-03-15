@@ -213,6 +213,5 @@ if __name__ == "__main__":
     page: str = fetch_llvm_releases_github_page()
     versions_and_page_links: typing.Dict[str, str] = extract_llvm_release_versions_and_links(page)
     versions_and_win64_uris: typing.Dict[str, str] = run_threads(versions_and_page_links)
-    activate_virtual_terminal_escapes_win32()
     print_results(versions_and_win64_uris)
     sys.exit(0)
